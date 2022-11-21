@@ -83,3 +83,7 @@ variable "Project.Connection.String" {
 variable "ConnectionStrings:Database" {
     value "#{Project.Connection.String}" {}
 }
+
+variable "Project.Database.Report.Path" {
+    value "C:\\DatabaseReports\\#{Octopus.Environment.Name}" {}
+}
