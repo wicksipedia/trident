@@ -15,7 +15,7 @@ step "deploy-trident-web" {
                 
                 Write-Host "Remove $machineName from the firewall"
                 
-                $number = Get -Random -Maximum 10
+                $number = Get-Random -Maximum 10
                 Write-Host "The random number is $number"
                 if ($number -ge 8) {
                 	Write-Host "Failing because reasons"
