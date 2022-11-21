@@ -14,13 +14,6 @@ step "deploy-trident-web" {
                 $machineName = $OctopusParameters["Octopus.Machine.Name"]
                 
                 Write-Host "Remove $machineName from the firewall"
-                
-                $number = Get-Random -Maximum 10
-                Write-Host "The random number is $number"
-                if ($number -ge 8) {
-                	Write-Host "Failing because reasons"
-                	Exit 1
-                }
             EOT
             Octopus.Action.Script.ScriptSource = "Inline"
             Octopus.Action.Script.Syntax = "PowerShell"
