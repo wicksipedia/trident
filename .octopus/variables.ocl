@@ -87,3 +87,7 @@ variable "ConnectionStrings:Database" {
 variable "Project.Database.Report.Path" {
     value "C:\\DatabaseReports\\#{Octopus.Environment.Name}" {}
 }
+
+variable "Project.Database.ApprovalRequired" {
+    value "#{Octopus.Action[Auto-Approve Database Delta Script].Output.ApprovalRequired}" {}
+}
